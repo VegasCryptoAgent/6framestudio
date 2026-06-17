@@ -546,6 +546,9 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
 .page-vcard-dur{font-size:10px;font-weight:700;letter-spacing:.1em;color:rgba(0,0,0,.3);text-transform:uppercase}
 .page-vcard-wrap{margin-bottom:36px}
 @media(max-width:1200px){.page-hero{padding:120px 40px 60px}.page-grid-section{padding:60px 40px 80px}}
+.page-work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px;max-width:1400px;margin:0 auto}
+@media(max-width:900px){.page-work-grid{grid-template-columns:repeat(2,1fr);gap:0 24px}}
+@media(max-width:560px){.page-work-grid{grid-template-columns:1fr;gap:0}.page-vcard-wrap{margin-bottom:40px}.page-vcard-desc{font-size:14px}}
 @media(max-width:768px){.page-hero{padding:100px 24px 48px}.page-grid-section{padding:48px 24px 64px}}
 @media(max-width:768px){
   .page-hero{padding:90px 20px 40px}
@@ -594,7 +597,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
 </section>
 
 <section class="page-grid-section">
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px;max-width:1400px;margin:0 auto">
+  <div class="page-work-grid">
   <div class="page-vcard-wrap reveal">
     <div class="vcard" style="aspect-ratio:16/9" onclick="openCinema('lGcaAbIJhP8')">
       <iframe data-src="https://www.youtube.com/embed/lGcaAbIJhP8?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=lGcaAbIJhP8&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
