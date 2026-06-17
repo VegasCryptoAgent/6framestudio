@@ -540,11 +540,44 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
 .back-link{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);text-decoration:none;margin-bottom:28px;transition:color .2s}
 .back-link:hover{color:var(--white)}
 .page-grid-section{background:var(--cream);padding:80px 80px 120px}
-.page-vcard-desc{font-size:13px;line-height:1.6;color:rgba(0,0,0,.55);margin-top:14px;max-width:560px}
-.page-vcard-meta{display:flex;align-items:center;gap:14px;margin-top:10px}
-.page-vcard-code{font-size:10px;font-weight:700;letter-spacing:.1em;color:rgba(0,0,0,.3);text-transform:uppercase}
-.page-vcard-dur{font-size:10px;font-weight:700;letter-spacing:.1em;color:rgba(0,0,0,.3);text-transform:uppercase}
-.page-vcard-wrap{margin-bottom:36px}
+.page-vcard-wrap{
+  margin-bottom:52px;
+  transition:transform .3s ease;
+}
+.page-vcard-wrap:hover{transform:translateY(-3px)}
+.page-vcard-wrap .vcard{border-radius:3px;overflow:hidden}
+.page-vcard-info-bar{
+  display:flex;flex-direction:column;gap:10px;
+  padding:16px 0 0;
+  border-top:2px solid var(--accent);
+}
+.page-vcard-desc{
+  font-size:13.5px;line-height:1.72;
+  color:rgba(0,0,0,.72);
+  font-weight:400;
+  letter-spacing:.005em;
+}
+.page-vcard-meta{
+  display:flex;align-items:center;gap:10px;
+  margin-top:2px;
+}
+.page-vcard-code{
+  font-size:9px;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--accent);
+  background:rgba(255,77,0,.1);
+  padding:4px 9px;border-radius:2px;
+  border:1px solid rgba(255,77,0,.2);
+}
+.page-vcard-dur{
+  font-size:9px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(0,0,0,.35);
+  display:flex;align-items:center;gap:6px;
+}
+.page-vcard-dur::before{
+  content:'';display:block;width:3px;height:3px;
+  background:rgba(0,0,0,.2);border-radius:50%;
+}
 @media(max-width:1200px){.page-hero{padding:120px 40px 60px}.page-grid-section{padding:60px 40px 80px}}
 .page-work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px;max-width:1400px;margin:0 auto}
 @media(max-width:900px){.page-work-grid{grid-template-columns:repeat(2,1fr);gap:0 24px}}
@@ -604,8 +637,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-overlay"><div class="vcard-title">JMI Entertainment Logo</div></div>
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
-    <div class="page-vcard-desc">A cinematic logo reveal for JMI Entertainment — built with dynamic lighting rigs, layered particle systems, and premium material textures that demand attention from the first frame.</div>
-    <div class="page-vcard-meta"><span class="page-vcard-code">6F-SR</span><span class="page-vcard-dur">0:12</span></div>
+    <div class="page-vcard-info-bar">
+      <div class="page-vcard-desc">A cinematic logo reveal for JMI Entertainment — built with dynamic lighting rigs, layered particle systems, and premium material textures that demand attention from the first frame.</div>
+      <div class="page-vcard-meta"><span class="page-vcard-code">6F-SR</span><span class="page-vcard-dur">0:12</span></div>
+    </div>
   </div>
   <div class="page-vcard-wrap reveal">
     <div class="vcard" style="aspect-ratio:16/9" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/1810.Short.Commercial.mp4')">
@@ -613,8 +648,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-overlay"><div class="vcard-title">1810 Series Promo</div></div>
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
-    <div class="page-vcard-desc">A high-energy promotional spot for the 1810 Series — razor-sharp motion graphics, luxury pacing, and technical precision woven together into a short-form commercial built to convert.</div>
-    <div class="page-vcard-meta"><span class="page-vcard-code">AF-775</span><span class="page-vcard-dur">0:30</span></div>
+    <div class="page-vcard-info-bar">
+      <div class="page-vcard-desc">A high-energy promotional spot for the 1810 Series — razor-sharp motion graphics, luxury pacing, and technical precision woven together into a short-form commercial built to convert.</div>
+      <div class="page-vcard-meta"><span class="page-vcard-code">AF-775</span><span class="page-vcard-dur">0:30</span></div>
+    </div>
   </div>
   <div class="page-vcard-wrap reveal">
     <div class="vcard" style="aspect-ratio:16/9" onclick="openCinema('zwolCfhHNu0')">
@@ -622,8 +659,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-overlay"><div class="vcard-title">IndeRoc Logo</div></div>
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
-    <div class="page-vcard-desc">A bold logo reveal for IndeRoc — raw, organic textures collide with structured composition to create a brand mark that hits hard and stays in your memory long after the screen goes dark.</div>
-    <div class="page-vcard-meta"><span class="page-vcard-code">PD-3</span><span class="page-vcard-dur">0:08</span></div>
+    <div class="page-vcard-info-bar">
+      <div class="page-vcard-desc">A bold logo reveal for IndeRoc — raw, organic textures collide with structured composition to create a brand mark that hits hard and stays in your memory long after the screen goes dark.</div>
+      <div class="page-vcard-meta"><span class="page-vcard-code">PD-3</span><span class="page-vcard-dur">0:08</span></div>
+    </div>
   </div>
   <div class="page-vcard-wrap reveal">
     <div class="vcard" style="aspect-ratio:16/9" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/FilmProjector.Commercial.mp4')">
@@ -631,8 +670,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-overlay"><div class="vcard-title">6Frame Projector Logo</div></div>
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
-    <div class="page-vcard-desc">The 6Frame Studio projector logo — a cinematic identity piece that fuses vintage film culture with modern motion design. Every frame engineered to feel like the start of something legendary.</div>
-    <div class="page-vcard-meta"><span class="page-vcard-code">JMI-EN</span><span class="page-vcard-dur">0:15</span></div>
+    <div class="page-vcard-info-bar">
+      <div class="page-vcard-desc">The 6Frame Studio projector logo — a cinematic identity piece that fuses vintage film culture with modern motion design. Every frame engineered to feel like the start of something legendary.</div>
+      <div class="page-vcard-meta"><span class="page-vcard-code">JMI-EN</span><span class="page-vcard-dur">0:15</span></div>
+    </div>
   </div>
   <div class="page-vcard-wrap reveal">
     <div class="vcard" style="aspect-ratio:16/9" onclick="openCinema('XLIxatny4F4')">
@@ -640,8 +681,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-overlay"><div class="vcard-title">6Frame Batman Commercial</div></div>
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
-    <div class="page-vcard-desc">6Frame takes on Gotham — a full-scale Batman commercial built with advanced 3D motion techniques, dramatic lighting, and iconic character-driven storytelling at a cinematic level.</div>
-    <div class="page-vcard-meta"><span class="page-vcard-code">NP-05</span><span class="page-vcard-dur">0:45</span></div>
+    <div class="page-vcard-info-bar">
+      <div class="page-vcard-desc">6Frame takes on Gotham — a full-scale Batman commercial built with advanced 3D motion techniques, dramatic lighting, and iconic character-driven storytelling at a cinematic level.</div>
+      <div class="page-vcard-meta"><span class="page-vcard-code">NP-05</span><span class="page-vcard-dur">0:45</span></div>
+    </div>
   </div>
   <div class="page-vcard-wrap reveal">
     <div class="vcard" style="aspect-ratio:16/9" onclick="openCinema('tCTEMTeCXMI')">
@@ -649,8 +692,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-overlay"><div class="vcard-title">6Frame Commercial</div></div>
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
-    <div class="page-vcard-desc">A flagship 6Frame Studio commercial — polished production from concept to final render, demonstrating our signature blend of high-end visual effects and results-driven brand storytelling.</div>
-    <div class="page-vcard-meta"><span class="page-vcard-code">NP-06</span><span class="page-vcard-dur">1:00</span></div>
+    <div class="page-vcard-info-bar">
+      <div class="page-vcard-desc">A flagship 6Frame Studio commercial — polished production from concept to final render, demonstrating our signature blend of high-end visual effects and results-driven brand storytelling.</div>
+      <div class="page-vcard-meta"><span class="page-vcard-code">NP-06</span><span class="page-vcard-dur">1:00</span></div>
+    </div>
   </div>
   <div class="page-vcard-wrap reveal">
     <div class="vcard" style="aspect-ratio:16/9" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/Be.Afraid.mp4')">
@@ -658,8 +703,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-overlay"><div class="vcard-title">Be Afraid. Be Very Afraid.</div></div>
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
-    <div class="page-vcard-desc">A visceral motion piece designed to stop the scroll dead. Tension-driven visual language, aggressive pacing, and a sound design that makes the audience feel something before they even know why.</div>
-    <div class="page-vcard-meta"><span class="page-vcard-code">NP-07</span><span class="page-vcard-dur">0:10</span></div>
+    <div class="page-vcard-info-bar">
+      <div class="page-vcard-desc">A visceral motion piece designed to stop the scroll dead. Tension-driven visual language, aggressive pacing, and a sound design that makes the audience feel something before they even know why.</div>
+      <div class="page-vcard-meta"><span class="page-vcard-code">NP-07</span><span class="page-vcard-dur">0:10</span></div>
+    </div>
   </div>
   <div class="page-vcard-wrap reveal">
     <div class="vcard" style="aspect-ratio:16/9" onclick="openCinema('eIGZyfRiC9M')">
@@ -667,8 +714,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-overlay"><div class="vcard-title">6Frame Studio Logo</div></div>
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
-    <div class="page-vcard-desc">The official 6Frame Studio brand mark in motion — a distillation of everything we stand for. Precision, impact, and a visual identity forged to represent the highest tier of motion design.</div>
-    <div class="page-vcard-meta"><span class="page-vcard-code">NP-08</span><span class="page-vcard-dur">0:12</span></div>
+    <div class="page-vcard-info-bar">
+      <div class="page-vcard-desc">The official 6Frame Studio brand mark in motion — a distillation of everything we stand for. Precision, impact, and a visual identity forged to represent the highest tier of motion design.</div>
+      <div class="page-vcard-meta"><span class="page-vcard-code">NP-08</span><span class="page-vcard-dur">0:12</span></div>
+    </div>
   </div>
   <div class="page-vcard-wrap reveal">
     <div class="vcard" style="aspect-ratio:16/9" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/6Frame.Sizzle.Reel.mp4')">
@@ -676,8 +725,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-overlay"><div class="vcard-title">1810 Series Commercial</div></div>
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
-    <div class="page-vcard-desc">A full production commercial for the 1810 Series — luxury pacing, immersive sound design, and motion graphics engineered to position the brand at the intersection of art and commerce.</div>
-    <div class="page-vcard-meta"><span class="page-vcard-code">NP-10</span><span class="page-vcard-dur">0:40</span></div>
+    <div class="page-vcard-info-bar">
+      <div class="page-vcard-desc">A full production commercial for the 1810 Series — luxury pacing, immersive sound design, and motion graphics engineered to position the brand at the intersection of art and commerce.</div>
+      <div class="page-vcard-meta"><span class="page-vcard-code">NP-10</span><span class="page-vcard-dur">0:40</span></div>
+    </div>
   </div>
   <div class="page-vcard-wrap reveal">
     <div class="vcard" style="aspect-ratio:16/9" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/6Frame.Opening.Scene.mp4')">
@@ -685,8 +736,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-overlay"><div class="vcard-title">1810 Series Intro</div></div>
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
-    <div class="page-vcard-desc">The opening sequence for the 1810 Series — a cinematic title card that sets the tone before a single word of dialogue is spoken. Atmosphere, tension, and brand identity locked in from frame one.</div>
-    <div class="page-vcard-meta"><span class="page-vcard-code">NP-11</span><span class="page-vcard-dur">0:35</span></div>
+    <div class="page-vcard-info-bar">
+      <div class="page-vcard-desc">The opening sequence for the 1810 Series — a cinematic title card that sets the tone before a single word of dialogue is spoken. Atmosphere, tension, and brand identity locked in from frame one.</div>
+      <div class="page-vcard-meta"><span class="page-vcard-code">NP-11</span><span class="page-vcard-dur">0:35</span></div>
+    </div>
   </div>
   <div class="page-vcard-wrap reveal">
     <div class="vcard" style="aspect-ratio:16/9" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/6Frame.Director.Commercial.mp4')">
@@ -694,8 +747,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-overlay"><div class="vcard-title">The Director's Cut: 6Frame Commercial</div><div class="vcard-tag">Director's Cut</div></div>
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
-    <div class="page-vcard-desc">A director's cut commercial from 6Frame Studio — uncompromised creative vision, premium production value, and the kind of visual storytelling that only comes from a team operating at the absolute top of its craft.</div>
-    <div class="page-vcard-meta"><span class="page-vcard-code">NP-12</span><span class="page-vcard-dur">1:00</span></div>
+    <div class="page-vcard-info-bar">
+      <div class="page-vcard-desc">A director's cut commercial from 6Frame Studio — uncompromised creative vision, premium production value, and the kind of visual storytelling that only comes from a team operating at the absolute top of its craft.</div>
+      <div class="page-vcard-meta"><span class="page-vcard-code">NP-12</span><span class="page-vcard-dur">1:00</span></div>
+    </div>
   </div>
   <div class="page-vcard-wrap reveal">
     <div class="vcard" style="aspect-ratio:16/9" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/6Frame.Superman.Commercial.mp4')">
@@ -703,8 +758,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-overlay"><div class="vcard-title">6Frame Superman Commercial</div></div>
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
-    <div class="page-vcard-desc">6Frame brings the Man of Steel to life — a Superman commercial built on complex character animation, epic environmental design, and a cinematic scope that puts studio-grade production in your hands.</div>
-    <div class="page-vcard-meta"><span class="page-vcard-code">NP-13</span><span class="page-vcard-dur">0:45</span></div>
+    <div class="page-vcard-info-bar">
+      <div class="page-vcard-desc">6Frame brings the Man of Steel to life — a Superman commercial built on complex character animation, epic environmental design, and a cinematic scope that puts studio-grade production in your hands.</div>
+      <div class="page-vcard-meta"><span class="page-vcard-code">NP-13</span><span class="page-vcard-dur">0:45</span></div>
+    </div>
   </div>
   </div>
 </section>
