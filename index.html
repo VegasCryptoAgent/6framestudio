@@ -590,6 +590,23 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
   footer{padding:48px 18px 28px}
   .foot-top{grid-template-columns:1fr;gap:32px}
 }
+/* touch devices — disable hover transforms */
+@media(hover:none){
+  .vcard:hover video,.vcard:hover iframe{transform:none}
+  .tier:hover .tier-thumb{transform:none}
+  .fcard:hover .fcard-thumb{transform:none}
+  .fcard:hover .fcard-info{transform:translateY(0)}
+  .fcard:hover .fcard-desc{opacity:1}
+  .fcard:hover .fcard-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
+  .hvcard:hover .hvcard-thumb{transform:none}
+}
+/* prevent horizontal overflow on narrow screens */
+@media(max-width:400px){
+  .hero-cta{flex-direction:column;align-items:flex-start;gap:14px}
+  .btn-hero{width:100%;text-align:center}
+  .bar{font-size:10px;gap:6px}
+  .ticker{height:36px}
+}
 
 </style>
 </head>
