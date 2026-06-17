@@ -881,8 +881,19 @@ const frameMargin = isTouchDevice ? '0px' : '100px 0px';
 const frameObs = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     const f = entry.target;
-    if (entry.isIntersecting) { if (!f.getAttribute('src')) f.src = f.dataset.src; }
-    else { if (f.getAttribute('src')) { f.dataset.src = f.src; f.removeAttribute('src'); } }
+    if (entry.isIntersecting) {
+      if (isTouchDevice) {
+        previewFrames.forEach(other => {
+          if (other !== f && other.getAttribute('src')) {
+            other.dataset.src = other.src;
+            other.removeAttribute('src');
+          }
+        });
+      }
+      if (!f.getAttribute('src')) f.src = f.dataset.src;
+    } else {
+      if (f.getAttribute('src')) { f.dataset.src = f.src; f.removeAttribute('src'); }
+    }
   });
 }, { threshold: 0.1, rootMargin: frameMargin });
 previewFrames.forEach(f => frameObs.observe(f));

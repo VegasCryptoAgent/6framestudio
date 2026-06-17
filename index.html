@@ -1322,6 +1322,7 @@ document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
 
 // Lazy-load + play preview videos only when visible (prevents bandwidth contention)
 const previewVideos = document.querySelectorAll('video[data-src]');
+const videoMargin = isTouchDevice ? '0px' : '100px 0px';
 const previewObs = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     const v = entry.target;
@@ -1337,7 +1338,7 @@ const previewObs = new IntersectionObserver(entries => {
       v.pause();
     }
   });
-}, { threshold: 0.1, rootMargin: '100px 0px' });
+}, { threshold: 0.1, rootMargin: videoMargin });
 previewVideos.forEach(v => previewObs.observe(v));
 
 const previewFrames = document.querySelectorAll('iframe[data-src]');
@@ -1347,6 +1348,14 @@ const frameObs = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     const f = entry.target;
     if (entry.isIntersecting) {
+      if (isTouchDevice) {
+        previewFrames.forEach(other => {
+          if (other !== f && other.getAttribute('src')) {
+            other.dataset.src = other.src;
+            other.removeAttribute('src');
+          }
+        });
+      }
       if (!f.getAttribute('src')) f.src = f.dataset.src;
     } else {
       if (f.getAttribute('src')) { f.dataset.src = f.src; f.removeAttribute('src'); }
