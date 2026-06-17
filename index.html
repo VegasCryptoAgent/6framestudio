@@ -538,6 +538,59 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
   .testimonials-header{padding:0 24px}
   .services-header{padding:60px 24px 40px}
 }
+
+/* ── HAMBURGER ── */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:210;margin-left:12px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--white);transition:transform .3s,opacity .3s;border-radius:2px}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+
+@media(max-width:768px){
+  .hamburger{display:flex}
+  .nav-links{
+    display:none;position:fixed;
+    top:calc(var(--bh) + var(--nh));left:0;right:0;bottom:0;
+    background:rgba(0,0,0,.97);backdrop-filter:blur(12px);
+    padding:32px 28px;flex-direction:column;gap:0;
+    z-index:199;list-style:none;overflow-y:auto;
+  }
+  .nav-links.open{display:flex}
+  .nav-links li{border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav-links li:last-child{border-bottom:none}
+  .nav-links a{display:block;padding:18px 0;font-size:17px;font-weight:500;color:rgba(255,255,255,.75);letter-spacing:.01em}
+  .nav-links a:hover{color:var(--white)}
+  .hero-l{padding:56px 24px 48px}
+  .hero-targets{gap:6px}
+  .hero-tag{font-size:9px;padding:4px 9px}
+  .service-tiers{gap:10px}
+  .tier{height:52vw;min-height:180px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat-item{border-right:none;border-bottom:1px solid rgba(0,0,0,.1)}
+  .showcase-grid{grid-template-columns:1fr}
+  .featured-grid{grid-template-columns:1fr}
+  .fcard{aspect-ratio:16/9}
+  .fcard.full{aspect-ratio:16/9}
+  .fcard-info{padding:20px 18px}
+  .fcard-title{font-size:18px}
+  .industries-grid{grid-template-columns:1fr}
+  .industry-item{padding:28px 24px}
+  .process-grid{grid-template-columns:1fr 1fr}
+  .services-header h2{font-size:clamp(28px,7vw,48px)}
+}
+@media(max-width:480px){
+  .nav-r .btn-accent{padding:8px 14px;font-size:11px}
+  .showcase-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+  .tier{height:60vw}
+  .sec-pad,.showcase,.industries,.featured,.process{padding:52px 18px}
+  .services-header{padding:52px 18px 36px}
+  footer{padding:48px 18px 28px}
+  .foot-top{grid-template-columns:1fr;gap:32px}
+}
+
 </style>
 </head>
 <body>
@@ -562,6 +615,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
     <a href="#contact" class="nav-si">Las Vegas / Los Angeles</a>
     <a href="contact.html" class="btn-accent">Request a Brief</a>
   </div>
+<button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- HERO -->
@@ -1324,6 +1378,23 @@ function closeCinema(e) {
   });
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCinema({ target: document.getElementById('cinemaModal') }); });
+
+function toggleNav(){
+  const h=document.getElementById('hamburger');
+  const n=document.querySelector('.nav-links');
+  if(!h||!n)return;
+  h.classList.toggle('open');
+  n.classList.toggle('open');
+  document.body.style.overflow=n.classList.contains('open')?'hidden':'';
+}
+// close nav on link click
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{
+  const h=document.getElementById('hamburger');
+  const n=document.querySelector('.nav-links');
+  if(h)h.classList.remove('open');
+  if(n)n.classList.remove('open');
+  document.body.style.overflow='';
+}));
 </script>
 </body>
 </html>
