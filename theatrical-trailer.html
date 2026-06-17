@@ -540,43 +540,47 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
 .back-link{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);text-decoration:none;margin-bottom:28px;transition:color .2s}
 .back-link:hover{color:var(--white)}
 .page-grid-section{background:var(--cream);padding:80px 80px 120px}
+.page-work-grid{gap:24px 24px}
 .page-vcard-wrap{
-  margin-bottom:52px;
-  transition:transform .3s ease;
+  margin-bottom:0;
+  background:#060606;
+  border-radius:4px;
+  overflow:hidden;
+  transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s cubic-bezier(.22,1,.36,1);
+  box-shadow:0 2px 12px rgba(0,0,0,.25),0 0 0 1px rgba(255,255,255,.04);
 }
-.page-vcard-wrap:hover{transform:translateY(-3px)}
-.page-vcard-wrap .vcard{border-radius:3px;overflow:hidden}
+.page-vcard-wrap:hover{
+  transform:translateY(-10px);
+  box-shadow:0 24px 60px rgba(0,0,0,.45),0 0 0 1px rgba(255,77,0,.25),0 0 32px rgba(255,77,0,.06);
+}
+.page-vcard-wrap .vcard{border-radius:0}
 .page-vcard-info-bar{
-  display:flex;flex-direction:column;gap:10px;
-  padding:16px 0 0;
-  border-top:2px solid var(--accent);
+  padding:18px 20px 20px;
+  display:flex;flex-direction:column;gap:9px;
+}
+.page-vcard-title-text{
+  font-size:15px;font-weight:800;letter-spacing:-.03em;
+  color:var(--white);line-height:1.2;
 }
 .page-vcard-desc{
-  font-size:13.5px;line-height:1.72;
-  color:rgba(0,0,0,.72);
+  font-size:12px;line-height:1.68;
+  color:rgba(255,255,255,.38);
   font-weight:400;
-  letter-spacing:.005em;
 }
 .page-vcard-meta{
-  display:flex;align-items:center;gap:10px;
-  margin-top:2px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-top:1px solid rgba(255,255,255,.07);
+  padding-top:12px;margin-top:4px;
 }
 .page-vcard-code{
-  font-size:9px;font-weight:800;letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--accent);
-  background:rgba(255,77,0,.1);
-  padding:4px 9px;border-radius:2px;
-  border:1px solid rgba(255,77,0,.2);
+  font-family:'SF Mono','Fira Code','Fira Mono',monospace;
+  font-size:8.5px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);
 }
 .page-vcard-dur{
-  font-size:9px;font-weight:600;letter-spacing:.1em;
-  text-transform:uppercase;color:rgba(0,0,0,.35);
-  display:flex;align-items:center;gap:6px;
-}
-.page-vcard-dur::before{
-  content:'';display:block;width:3px;height:3px;
-  background:rgba(0,0,0,.2);border-radius:50%;
+  font-family:'SF Mono','Fira Code','Fira Mono',monospace;
+  font-size:8.5px;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:rgba(255,255,255,.22);
 }
 @media(max-width:1200px){.page-hero{padding:120px 40px 60px}.page-grid-section{padding:60px 40px 80px}}
 .page-work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px;max-width:1400px;margin:0 auto}
@@ -638,6 +642,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
     <div class="page-vcard-info-bar">
+      <div class="page-vcard-title-text">El Patron</div>
       <div class="page-vcard-desc">A dark and gritty trailer for 'El Patron', highlighting the intense atmosphere and cinematic sound design.</div>
       <div class="page-vcard-meta"><span class="page-vcard-code">6F-SR</span><span class="page-vcard-dur">2:15</span></div>
     </div>
@@ -649,6 +654,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
     <div class="page-vcard-info-bar">
+      <div class="page-vcard-title-text">Par 4 the Course</div>
       <div class="page-vcard-desc">A high-energy sports satire spoof of the latest trials and tribulations of Tiger Woods.</div>
       <div class="page-vcard-meta"><span class="page-vcard-code">AF-775</span><span class="page-vcard-dur">0:45</span></div>
     </div>
@@ -660,6 +666,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
     <div class="page-vcard-info-bar">
+      <div class="page-vcard-title-text">Inner — Music Video</div>
       <div class="page-vcard-desc">Visually stunning music video for 'Inner', utilizing surreal imagery and rhythmic editing to complement the track.</div>
       <div class="page-vcard-meta"><span class="page-vcard-code">NP-03</span><span class="page-vcard-dur">3:40</span></div>
     </div>
@@ -671,6 +678,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
     <div class="page-vcard-info-bar">
+      <div class="page-vcard-title-text">The 27 Protocol</div>
       <div class="page-vcard-desc">Sci-fi thriller trailer 'The 27 Protocol', using advanced VFX and a pulsing soundtrack to build suspense.</div>
       <div class="page-vcard-meta"><span class="page-vcard-code">NP-04</span><span class="page-vcard-dur">1:50</span></div>
     </div>
@@ -682,6 +690,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
     <div class="page-vcard-info-bar">
+      <div class="page-vcard-title-text">The Thorn Recordings</div>
       <div class="page-vcard-desc">An upcoming cinematic production from 6Frame Studio — advanced VFX and AI-assisted production techniques applied to a full sci-fi short film.</div>
       <div class="page-vcard-meta"><span class="page-vcard-code">PX-05</span><span class="page-vcard-dur">TBD</span></div>
     </div>
@@ -693,6 +702,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding
       <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
     <div class="page-vcard-info-bar">
+      <div class="page-vcard-title-text">Recursion</div>
       <div class="page-vcard-desc">A short film premiere from 6Frame Studio — an AI-driven sci-fi concept piece built with studio-grade VFX and tension-driven pacing.</div>
       <div class="page-vcard-meta"><span class="page-vcard-code">PX-06</span><span class="page-vcard-dur">TBD</span></div>
     </div>
