@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>6FRAME | Cinematic Brand Evolution — Hollywood-Grade Production</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://www.youtube.com"/>
+<link rel="preconnect" href="https://www.youtube-nocookie.com"/>
+<link rel="preconnect" href="https://i.ytimg.com"/>
+<link rel="preconnect" href="https://img.youtube.com"/>
+<link rel="dns-prefetch" href="https://6frame-videos.lvbretteam.workers.dev"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#000;--dark:#0a0a0a;--dark2:#111;--dark3:#1a1a1a;
+  --cream:#f5f0e8;--white:#fff;
+  --accent:#ff4d00;--accent2:#ff6b30;
+  --nh:68px;--bh:40px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
+
+/* ── ANNOUNCEMENT BAR ── */
+.bar{
+  position:sticky;top:0;z-index:300;height:var(--bh);
+  background:#0f0f0f;border-bottom:1px solid rgba(255,77,0,.15);
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.5);
+}
+.bar strong{color:var(--accent);font-weight:700}
+.bar a{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,77,0,.4)}
+.bar-x{position:absolute;right:20px;background:none;border:none;color:rgba(255,255,255,.2);font-size:18px;cursor:pointer;line-height:1}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:var(--bh);z-index:200;height:var(--nh);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 52px;background:transparent;
+  transition:background .4s,backdrop-filter .4s;
+}
+nav.scrolled{background:rgba(0,0,0,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05)}
+.logo{font-size:17px;font-weight:900;letter-spacing:-.04em;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:2px}
+.logo-accent{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.45);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.02em;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-r{display:flex;align-items:center;gap:16px}
+.nav-si{font-size:13px;font-weight:500;color:rgba(255,255,255,.35);text-decoration:none;letter-spacing:.02em;transition:color .2s}
+.nav-si:hover{color:var(--white)}
+.btn-accent{
+  background:var(--accent);color:var(--white);font-family:'Inter',sans-serif;
+  font-size:13px;font-weight:700;padding:10px 22px;border-radius:2px;
+  border:none;cursor:pointer;text-decoration:none;display:inline-block;
+  letter-spacing:.04em;text-transform:uppercase;
+  transition:background .2s,transform .2s;
+}
+.btn-accent:hover{background:var(--accent2);transform:translateY(-1px)}
+
+/* ── HERO ── */
+.hero{
+  display:grid;grid-template-columns:44% 56%;
+  height:calc(100vh - var(--nh) - var(--bh));
+  min-height:680px;background:var(--black);overflow:hidden;
+}
+.hero-l{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 48px 80px 80px;position:relative;z-index:2;
+}
+.hero-l::after{
+  content:'';position:absolute;right:0;top:0;bottom:0;width:120px;
+  background:linear-gradient(to right,transparent,var(--black));
+  pointer-events:none;z-index:1;
+}
+.hero-eyebrow{
+  font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);display:flex;align-items:center;gap:10px;margin-bottom:24px;
+  opacity:0;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .1s forwards;
+}
+.hero-eyebrow::before{content:'■';font-size:6px}
+.hero-h1{
+  font-size:clamp(40px,4.8vw,74px);font-weight:900;line-height:1.0;
+  letter-spacing:-.05em;color:var(--white);
+  opacity:0;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .22s forwards;
+}
+.hero-h1 em{
+  font-family:'DM Serif Display',serif;font-style:italic;
+  font-weight:400;color:var(--accent);display:block;line-height:1.05;
+}
+.hero-sub{
+  font-size:15px;line-height:1.7;
+  color:rgba(255,255,255,.45);max-width:420px;margin-top:22px;
+  opacity:0;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .36s forwards;
+}
+.hero-targets{
+  display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;
+  opacity:0;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .44s forwards;
+}
+.hero-tag{
+  font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 12px;border:1px solid rgba(255,255,255,.18);
+  background:linear-gradient(135deg,#e8e8e8 0%,#ffffff 20%,#b0b0b0 35%,#f5f5f5 50%,#8a8a8a 65%,#d0d0d0 80%,#ffffff 90%,#c0c0c0 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  text-shadow:none;filter:drop-shadow(0 1px 2px rgba(0,0,0,.6));
+}
+.hero-cta{
+  margin-top:36px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+  opacity:0;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .5s forwards;
+}
+.btn-hero{
+  background:var(--accent);color:var(--white);font-family:'Inter',sans-serif;
+  font-size:13px;font-weight:700;padding:15px 36px;border-radius:2px;
+  border:none;cursor:pointer;text-decoration:none;display:inline-block;
+  letter-spacing:.08em;text-transform:uppercase;
+  transition:background .2s,transform .2s;
+}
+.btn-hero:hover{background:var(--accent2);transform:translateY(-2px)}
+.btn-ghost{
+  color:rgba(255,255,255,.4);font-size:12px;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;
+  text-decoration:none;transition:color .2s;
+}
+.btn-ghost:hover{color:var(--white)}
+
+/* Hero right — 3 columns of 9:16 portrait videos */
+.hero-r{
+  position:relative;overflow:hidden;
+  display:flex;gap:8px;padding:0 20px 0 10px;
+}
+.hcol{flex:1;display:flex;flex-direction:column;gap:8px;overflow:hidden}
+.hcol-inner{
+  display:flex;flex-direction:column;gap:8px;
+  animation:vscroll 28s linear infinite;
+}
+.hcol:nth-child(1) .hcol-inner{animation-duration:30s}
+.hcol:nth-child(2) .hcol-inner{animation-duration:38s;margin-top:-100px}
+.hcol:nth-child(3) .hcol-inner{animation-duration:34s;margin-top:-50px}
+@keyframes vscroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+.hvcard{
+  border-radius:4px;overflow:hidden;position:relative;cursor:pointer;flex-shrink:0;
+  aspect-ratio:9/16;width:100%;background:#111;
+}
+.hvcard-thumb{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  transition:transform .6s ease;
+}
+.hvcard:hover .hvcard-thumb{transform:scale(1.04)}
+.hvcard-label{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(0,0,0,.9) 0%,transparent 100%);
+  padding:20px 12px 12px;
+  font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  opacity:0;transition:opacity .3s;
+}
+.hvcard:hover .hvcard-label{opacity:1}
+.hvcard-tag{color:var(--accent);font-size:9px;display:block;margin-top:2px}
+/* fade edges */
+.hero-r::before,.hero-r::after{
+  content:'';position:absolute;left:0;right:0;z-index:4;pointer-events:none;
+}
+.hero-r::before{top:0;height:120px;background:linear-gradient(to bottom,var(--black),transparent)}
+.hero-r::after{bottom:0;height:120px;background:linear-gradient(to top,var(--black),transparent)}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ── TICKER ── */
+.ticker{
+  background:var(--accent);padding:0;overflow:hidden;height:44px;
+  display:flex;align-items:center;
+}
+.ticker-track{
+  display:flex;width:max-content;
+  animation:scrollX 20s linear infinite;
+}
+@keyframes scrollX{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker-item{
+  display:flex;align-items:center;gap:20px;padding:0 36px;
+  font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(0,0,0,.7);white-space:nowrap;
+}
+.ticker-item::after{content:'◆';font-size:7px;color:rgba(0,0,0,.4)}
+
+/* ── SECTION UTILITIES ── */
+.lbl{
+  display:inline-block;font-size:10px;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:16px;
+}
+.lbl-dark{color:rgba(0,0,0,.35)}
+.sh{
+  font-size:clamp(32px,4vw,60px);font-weight:900;line-height:1.04;
+  letter-spacing:-.05em;color:var(--white);
+}
+.sh em{font-family:'DM Serif Display',serif;font-style:italic;font-weight:400;color:var(--accent)}
+.sh-dark{color:#000}
+.sh-dark em{color:var(--accent)}
+.sp{font-size:16px;line-height:1.7;color:rgba(255,255,255,.45);margin-top:14px}
+.sp-dark{color:rgba(0,0,0,.5)}
+.sec-pad{padding:120px 80px}
+.sec-center{text-align:center;display:flex;flex-direction:column;align-items:center}
+
+/* ── SERVICES SECTION ── */
+.services{background:var(--dark);padding:0}
+.services-header{padding:100px 80px 60px;border-bottom:1px solid rgba(255,255,255,.06)}
+.service-tiers{display:grid;grid-template-columns:repeat(3,1fr)}
+.tier{position:relative;overflow:hidden;aspect-ratio:16/9;cursor:pointer}
+.tier-thumb{
+  position:absolute;inset:0;width:100%;height:100%;
+  background-size:cover;background-position:center;
+  transition:transform .8s cubic-bezier(.22,1,.36,1);
+}
+.tier-thumb video{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;display:block;
+}
+.tier:hover .tier-thumb{transform:scale(1.04)}
+.tier-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.2) 50%,transparent 100%);
+  z-index:1;
+}
+.tier-content{
+  position:absolute;bottom:0;left:0;right:0;z-index:2;
+  padding:48px 40px;
+  transform:translateY(8px);transition:transform .4s;
+}
+.tier:hover .tier-content{transform:translateY(0)}
+.tier-num{font-size:10px;font-weight:700;letter-spacing:.2em;color:rgba(255,255,255,.3);text-transform:uppercase;margin-bottom:14px}
+.tier-title{font-size:clamp(24px,2.5vw,34px);font-weight:900;letter-spacing:-.04em;color:var(--white);line-height:1.1;margin-bottom:8px}
+.tier-price{font-size:22px;font-weight:800;color:var(--accent);letter-spacing:-.02em;margin-bottom:14px}
+.tier-desc{font-size:13px;line-height:1.6;color:rgba(255,255,255,.5);max-width:300px;margin-bottom:20px;opacity:0;transform:translateY(6px);transition:opacity .4s .05s,transform .4s .05s}
+.tier:hover .tier-desc{opacity:1;transform:translateY(0)}
+.tier-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--accent);
+  opacity:0;transform:translateY(6px);transition:opacity .4s .1s,transform .4s .1s;
+}
+.tier:hover .tier-cta{opacity:1;transform:translateY(0)}
+.tier-cta::after{content:'→'}
+.tier+.tier{border-left:1px solid rgba(255,255,255,.06)}
+
+.tier-fallback{display:flex;align-items:center;justify-content:center}
+.tf1{background:linear-gradient(135deg,#1a0a00,#3d1400,#7a2800)}
+.tf2{background:linear-gradient(135deg,#0a0012,#220033,#440066)}
+.tf3{background:linear-gradient(135deg,#000d1a,#001a33,#003366)}
+
+/* ── SHOWCASE SECTION ── */
+.showcase{background:var(--cream);padding:100px 80px}
+.showcase-header{margin-bottom:60px}
+.showcase-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:auto;
+  gap:4px;
+}
+.vcard{
+  position:relative;overflow:hidden;background:#111;cursor:pointer;
+  aspect-ratio:16/9;
+}
+.vcard.tall{grid-row:span 2;aspect-ratio:auto}
+.vcard.wide{grid-column:span 2}
+.vcard-thumb{
+  position:absolute;inset:0;width:100%;height:100%;
+  background-size:cover;background-position:center;
+  transition:transform .6s cubic-bezier(.22,1,.36,1);
+  filter:brightness(.9);
+}
+.vcard:hover .vcard-thumb{transform:scale(1.05);filter:brightness(1)}
+.vcard-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.85) 0%,transparent 50%);
+  opacity:0;transition:opacity .35s;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:20px;
+}
+.vcard:hover .vcard-overlay{opacity:1}
+.vcard-title{font-size:13px;font-weight:700;letter-spacing:-.01em;color:var(--white);margin-bottom:4px}
+.vcard-tag{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.vcard-play{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(.85);
+  width:52px;height:52px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.4);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .3s,transform .3s;
+}
+.vcard:hover .vcard-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.vcard-play svg{width:20px;height:20px;fill:white;margin-left:3px}
+
+/* YouTube iframe previews — rendered onto a true 3840x2160 surface, then scaled
+   down into the card. YouTube's adaptive bitrate sees a 4K player and serves 2160p
+   instead of low-res; the card's overflow:hidden crops the oversize + branding. */
+.vcard iframe{
+  position:absolute;top:50%;left:50%;
+  width:3840px;height:2160px;
+  transform-origin:center center;
+  transform:translate(-50%,-50%) scale(0.28);
+  border:none;pointer-events:none;
+}
+.vcard.wide iframe{transform:translate(-50%,-50%) scale(0.52)}
+
+/* CDN video in cards */
+.vcard video,.vcard .vcard-video,.fcard video,.fcard .fcard-video{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;transition:transform .6s cubic-bezier(.22,1,.36,1);
+}
+.vcard:hover video,.vcard:hover .vcard-video{transform:scale(1.05)}
+.fcard:hover video,.fcard:hover .fcard-video{transform:scale(1.03)}
+
+/* Cinema modal */
+.cinema-modal{
+  display:none;position:fixed;inset:0;z-index:1000;
+  background:rgba(0,0,0,.97);align-items:center;justify-content:center;
+}
+.cinema-modal.active{display:flex}
+.cinema-modal iframe{width:90vw;max-width:1200px;aspect-ratio:16/9;border:none;border-radius:2px}
+.cinema-close{
+  position:absolute;top:24px;right:30px;
+  font-size:28px;color:rgba(255,255,255,.5);
+  background:none;border:none;cursor:pointer;transition:color .2s;
+  font-weight:300;
+}
+.cinema-close:hover{color:var(--white)}
+
+/* ── INDUSTRIES SECTION ── */
+.industries{background:var(--black);padding:100px 80px}
+.industries-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:60px;border:1px solid rgba(255,255,255,.06)}
+.industry-card{
+  padding:48px 44px;border:none;
+  background:var(--dark2);position:relative;overflow:hidden;
+  transition:background .3s;
+}
+.industry-card::before{
+  content:'';position:absolute;top:0;left:0;width:3px;height:0;
+  background:var(--accent);transition:height .4s;
+}
+.industry-card:hover{background:#0f0f0f}
+.industry-card:hover::before{height:100%}
+.ind-num{font-size:11px;font-weight:700;letter-spacing:.15em;color:rgba(255,255,255,.2);margin-bottom:16px}
+.ind-title{font-size:22px;font-weight:800;letter-spacing:-.04em;color:var(--white);margin-bottom:10px}
+.ind-desc{font-size:14px;line-height:1.65;color:rgba(255,255,255,.38)}
+
+/* ── STATS ── */
+.stats{
+  background:var(--accent);padding:80px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+}
+.stat-item{
+  text-align:center;padding:40px;border-right:1px solid rgba(0,0,0,.12);
+}
+.stat-item:last-child{border-right:none}
+.stat-num{
+  font-size:clamp(48px,6vw,80px);font-weight:900;
+  letter-spacing:-.06em;color:var(--black);line-height:1;
+}
+.stat-label{
+  font-size:12px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(0,0,0,.5);margin-top:8px;
+}
+
+/* ── FEATURED WORKS ── */
+.featured{background:var(--dark);padding:100px 80px}
+.featured-header{margin-bottom:60px}
+.featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.fcard{
+  position:relative;overflow:hidden;cursor:pointer;background:#111;
+  aspect-ratio:16/9;
+}
+.fcard.full{grid-column:span 2;aspect-ratio:21/9}
+.fcard-thumb{
+  position:absolute;inset:0;width:100%;height:100%;
+  background-size:cover;background-position:center;
+  transition:transform .7s cubic-bezier(.22,1,.36,1);filter:brightness(.6);
+}
+.fcard:hover .fcard-thumb{transform:scale(1.03);filter:brightness(.8)}
+.fcard-info{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:40px;
+  background:linear-gradient(to top,rgba(0,0,0,.9),transparent);
+  transform:translateY(4px);transition:transform .4s;
+}
+.fcard:hover .fcard-info{transform:translateY(0)}
+.fcard-tag{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.fcard-title{font-size:clamp(18px,2.2vw,28px);font-weight:900;letter-spacing:-.04em;margin-bottom:8px}
+.fcard-desc{font-size:13px;line-height:1.55;color:rgba(255,255,255,.45);max-width:500px;opacity:0;transform:translateY(4px);transition:opacity .4s .05s,transform .4s .05s}
+.fcard:hover .fcard-desc{opacity:1;transform:translateY(0)}
+.fcard-play{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%) scale(.8);
+  width:60px;height:60px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.3);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .3s,transform .3s;
+}
+.fcard:hover .fcard-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.fcard-play svg{width:22px;height:22px;fill:white;margin-left:3px}
+
+/* ── HOW IT WORKS ── */
+.process{background:var(--cream);padding:100px 80px}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px;margin-top:64px}
+.proc-item{}
+.proc-num{font-size:10px;font-weight:700;letter-spacing:.2em;color:rgba(0,0,0,.25);margin-bottom:16px}
+.proc-title{font-size:18px;font-weight:800;letter-spacing:-.03em;color:#000;margin-bottom:10px}
+.proc-desc{font-size:14px;line-height:1.65;color:rgba(0,0,0,.5)}
+.proc-line{width:24px;height:2px;background:var(--accent);margin-bottom:18px}
+
+/* ── TESTIMONIALS ── */
+.testimonials{background:var(--black);padding:100px 0}
+.testimonials-header{padding:0 80px;margin-bottom:56px}
+.trow{overflow:hidden;margin-bottom:16px}
+.trow-inner{display:flex;gap:16px;width:max-content}
+.trow:nth-child(1) .trow-inner{animation:scrollX 36s linear infinite}
+.trow:nth-child(2) .trow-inner{animation:scrollX 44s linear infinite reverse}
+.tcard{
+  width:360px;flex-shrink:0;
+  background:var(--dark2);border:1px solid rgba(255,255,255,.06);
+  padding:32px;border-radius:2px;
+}
+.tcard-stars{color:var(--accent);font-size:12px;letter-spacing:2px;margin-bottom:14px}
+.tcard-text{font-size:14px;line-height:1.65;color:rgba(255,255,255,.65);margin-bottom:20px}
+.tcard-author{display:flex;align-items:center;gap:12px}
+.tcard-avatar{
+  width:36px;height:36px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;color:var(--white);flex-shrink:0;
+}
+.tcard-name{font-size:13px;font-weight:700;color:var(--white)}
+.tcard-role{font-size:11px;color:rgba(255,255,255,.3);margin-top:1px}
+.tcard-company{
+  margin-left:auto;font-size:10px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(255,255,255,.15);
+  padding:4px 10px;border:1px solid rgba(255,255,255,.08);
+}
+
+/* ── FINAL CTA ── */
+.final-cta{
+  background:var(--white);padding:140px 80px;
+  text-align:center;
+}
+.final-cta .sh{color:#000;font-size:clamp(36px,5.5vw,80px)}
+.final-cta .sh em{color:var(--accent)}
+.final-sub{font-size:17px;line-height:1.7;color:rgba(0,0,0,.45);max-width:560px;margin:20px auto 0}
+.final-cta-btns{display:flex;justify-content:center;gap:20px;margin-top:44px}
+.btn-dark{
+  background:#000;color:var(--white);font-family:'Inter',sans-serif;
+  font-size:13px;font-weight:700;padding:15px 36px;border-radius:2px;
+  border:none;cursor:pointer;text-decoration:none;display:inline-block;
+  letter-spacing:.08em;text-transform:uppercase;transition:background .2s;
+}
+.btn-dark:hover{background:#1a1a1a}
+.btn-outline{
+  background:transparent;color:#000;font-family:'Inter',sans-serif;
+  font-size:13px;font-weight:700;padding:15px 36px;border-radius:2px;
+  border:2px solid rgba(0,0,0,.15);cursor:pointer;text-decoration:none;
+  display:inline-block;letter-spacing:.08em;text-transform:uppercase;
+  transition:border-color .2s;
+}
+.btn-outline:hover{border-color:rgba(0,0,0,.4)}
+.location-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(0,0,0,.3);margin-top:32px;
+}
+.location-tag::before{content:'◆';font-size:6px;color:var(--accent)}
+
+/* ── FOOTER ── */
+footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding:80px 80px 40px}
+.foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:60px;margin-bottom:64px}
+.foot-brand p{font-size:14px;line-height:1.65;color:rgba(255,255,255,.3);margin-top:12px;max-width:260px}
+.foot-col h4{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:18px}
+.foot-col ul{list-style:none}
+.foot-col li{margin-bottom:10px}
+.foot-col a{font-size:13px;color:rgba(255,255,255,.38);text-decoration:none;transition:color .2s;letter-spacing:.01em}
+.foot-col a:hover{color:var(--white)}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.06);padding-top:28px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.foot-copy{font-size:12px;color:rgba(255,255,255,.2);letter-spacing:.02em}
+.foot-copy span{color:var(--accent)}
+.foot-links{display:flex;gap:28px}
+.foot-links a{font-size:12px;color:rgba(255,255,255,.2);text-decoration:none;transition:color .2s}
+.foot-links a:hover{color:rgba(255,255,255,.5)}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1200px){
+  .hero{grid-template-columns:1fr;height:auto;min-height:auto}
+  .hero-l{padding:100px 48px 80px;text-align:left}
+  .hero-l::after{display:none}
+  .hero-r{display:none}
+  .service-tiers{grid-template-columns:1fr}
+  .tier{height:60vh}
+  .featured-grid{grid-template-columns:1fr}
+  .fcard.full{grid-column:span 1;aspect-ratio:16/9}
+  .industries-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-top{grid-template-columns:1fr 1fr;gap:40px}
+  .sec-pad{padding:80px 40px}
+  .showcase{padding:80px 40px}
+  .industries{padding:80px 40px}
+  .featured{padding:80px 40px}
+  .process{padding:80px 40px}
+  .stats{grid-template-columns:1fr}
+  .stat-item{border-right:none;border-bottom:1px solid rgba(0,0,0,.12)}
+  .stat-item:last-child{border-bottom:none}
+  .showcase-grid{grid-template-columns:repeat(2,1fr)}
+  .vcard.tall,.vcard.wide{grid-column:span 1;grid-row:span 1}
+  .services-header{padding:80px 40px 48px}
+}
+@media(max-width:768px){
+  nav{padding:0 24px}
+  .nav-links,.nav-si{display:none}
+  .sec-pad{padding:60px 24px}
+  .showcase{padding:60px 24px}
+  .industries{padding:60px 24px}
+  .featured{padding:60px 24px}
+  .process{padding:60px 24px}
+  .stats{padding:60px 24px}
+  .final-cta{padding:80px 24px}
+  footer{padding:60px 24px 32px}
+  .foot-top{grid-template-columns:1fr;gap:36px}
+  .foot-bottom{flex-direction:column;gap:16px;text-align:center}
+  .showcase-grid{grid-template-columns:repeat(2,1fr)}
+  .process-grid{grid-template-columns:1fr}
+  .testimonials-header{padding:0 24px}
+  .services-header{padding:60px 24px 40px}
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="bar" id="bar">
+  <strong>New:</strong>&nbsp;Studio-Grade Theatrical Trailers now available —&nbsp;
+  <a href="contact.html">Request a brief →</a>
+  <button class="bar-x" onclick="document.getElementById('bar').style.display='none'">×</button>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo">6<span class="logo-accent">FRAME</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#showcase">Our Work</a></li>
+    <li><a href="#industries">Who We Serve</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <a href="#contact" class="nav-si">Las Vegas / Los Angeles</a>
+    <a href="contact.html" class="btn-accent">Request a Brief</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-l">
+    <div class="hero-eyebrow">Cinematic Brand Evolution</div>
+    <h1 class="hero-h1">
+      The production studio<br>
+      <em>Hollywood calls</em>
+      when it's not enough to be good.
+    </h1>
+    <p class="hero-sub">Motion logos, cinematic identity systems, and theatrical trailers — built for film studios, music labels, major brands, and directors who refuse to compromise.</p>
+    <div class="hero-targets">
+      <span class="hero-tag">Film Studios</span>
+      <span class="hero-tag">Music Labels</span>
+      <span class="hero-tag">Major Brands</span>
+      <span class="hero-tag">Independent Directors</span>
+      <span class="hero-tag">Ad Departments</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#services" class="btn-hero">See Our Work</a>
+      <a href="contact.html" class="btn-ghost">Request a Brief →</a>
+    </div>
+  </div>
+  <div class="hero-r">
+    <!-- Column 1: JMI Logo | El Patron | Tesla | Thorn Recordings -->
+    <div class="hcol">
+      <div class="hcol-inner">
+        <div class="hvcard" onclick="openCinema('CAWbPBQC8BE')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/CAWbPBQC8BE/maxresdefault.jpg')"></div><div class="hvcard-label">JMI Entertainment<span class="hvcard-tag">Logo Reveal</span></div></div>
+        <div class="hvcard" onclick="openCinema('qUAdldPwI5Y')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/qUAdldPwI5Y/maxresdefault.jpg')"></div><div class="hvcard-label">El Patron<span class="hvcard-tag">Theatrical Trailer</span></div></div>
+        <div class="hvcard" onclick="openCinema('1KflvheiU-o')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/1KflvheiU-o/maxresdefault.jpg')"></div><div class="hvcard-label">Tesla<span class="hvcard-tag">Brand Commercial</span></div></div>
+        <div class="hvcard" onclick="openCinema('nJnh9pLE24Y')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/nJnh9pLE24Y/maxresdefault.jpg')"></div><div class="hvcard-label">The Thorn Recordings<span class="hvcard-tag">Sci-Fi Short</span></div></div>
+        <!-- duplicate for seamless loop -->
+        <div class="hvcard" onclick="openCinema('CAWbPBQC8BE')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/CAWbPBQC8BE/maxresdefault.jpg')"></div><div class="hvcard-label">JMI Entertainment<span class="hvcard-tag">Logo Reveal</span></div></div>
+        <div class="hvcard" onclick="openCinema('qUAdldPwI5Y')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/qUAdldPwI5Y/maxresdefault.jpg')"></div><div class="hvcard-label">El Patron<span class="hvcard-tag">Theatrical Trailer</span></div></div>
+        <div class="hvcard" onclick="openCinema('1KflvheiU-o')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/1KflvheiU-o/maxresdefault.jpg')"></div><div class="hvcard-label">Tesla<span class="hvcard-tag">Brand Commercial</span></div></div>
+        <div class="hvcard" onclick="openCinema('nJnh9pLE24Y')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/nJnh9pLE24Y/maxresdefault.jpg')"></div><div class="hvcard-label">The Thorn Recordings<span class="hvcard-tag">Sci-Fi Short</span></div></div>
+      </div>
+    </div>
+    <!-- Column 2: Sizzle Reel | Cinematic Commercial | Batman | Manifest Nueve -->
+    <div class="hcol">
+      <div class="hcol-inner">
+        <div class="hvcard" onclick="openCinema('SPb69r09qFI')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/SPb69r09qFI/maxresdefault.jpg')"></div><div class="hvcard-label">Sizzle Reel 2025<span class="hvcard-tag">Full Showcase</span></div></div>
+        <div class="hvcard" onclick="openCinema('xQbTwOwlRa4')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/xQbTwOwlRa4/maxresdefault.jpg')"></div><div class="hvcard-label">Cinematic Commercial<span class="hvcard-tag">Brand Film</span></div></div>
+        <div class="hvcard" onclick="openCinema('XLIxatny4F4')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/XLIxatny4F4/maxresdefault.jpg')"></div><div class="hvcard-label">Batman<span class="hvcard-tag">Brand Commercial</span></div></div>
+        <div class="hvcard" onclick="openCinema('-NNkPJEanlI')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/-NNkPJEanlI/maxresdefault.jpg')"></div><div class="hvcard-label">Manifest Nueve<span class="hvcard-tag">Fragrance Commercial</span></div></div>
+        <!-- duplicate -->
+        <div class="hvcard" onclick="openCinema('SPb69r09qFI')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/SPb69r09qFI/maxresdefault.jpg')"></div><div class="hvcard-label">Sizzle Reel 2025<span class="hvcard-tag">Full Showcase</span></div></div>
+        <div class="hvcard" onclick="openCinema('xQbTwOwlRa4')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/xQbTwOwlRa4/maxresdefault.jpg')"></div><div class="hvcard-label">Cinematic Commercial<span class="hvcard-tag">Brand Film</span></div></div>
+        <div class="hvcard" onclick="openCinema('XLIxatny4F4')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/XLIxatny4F4/maxresdefault.jpg')"></div><div class="hvcard-label">Batman<span class="hvcard-tag">Brand Commercial</span></div></div>
+        <div class="hvcard" onclick="openCinema('-NNkPJEanlI')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/-NNkPJEanlI/maxresdefault.jpg')"></div><div class="hvcard-label">Manifest Nueve<span class="hvcard-tag">Fragrance Commercial</span></div></div>
+      </div>
+    </div>
+    <!-- Column 3: IndeRoc | 6Frame Dawn | Eden Festival | Director's Cut -->
+    <div class="hcol">
+      <div class="hcol-inner">
+        <div class="hvcard" onclick="openCinema('zwolCfhHNu0')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/zwolCfhHNu0/maxresdefault.jpg')"></div><div class="hvcard-label">IndeRoc<span class="hvcard-tag">Logo Reveal</span></div></div>
+        <div class="hvcard" onclick="openCinema('tCTEMTeCXMI')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/tCTEMTeCXMI/maxresdefault.jpg')"></div><div class="hvcard-label">6Frame Studio<span class="hvcard-tag">Cinematic Intro</span></div></div>
+        <div class="hvcard" onclick="openCinema('mFzzX6g5hTI')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/mFzzX6g5hTI/maxresdefault.jpg')"></div><div class="hvcard-label">Eden Festival<span class="hvcard-tag">Event Promo</span></div></div>
+        <div class="hvcard" onclick="openCinema('fwS1HKZBgfg')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/fwS1HKZBgfg/maxresdefault.jpg')"></div><div class="hvcard-label">Director's Cut<span class="hvcard-tag">6Frame Commercial</span></div></div>
+        <!-- duplicate -->
+        <div class="hvcard" onclick="openCinema('zwolCfhHNu0')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/zwolCfhHNu0/maxresdefault.jpg')"></div><div class="hvcard-label">IndeRoc<span class="hvcard-tag">Logo Reveal</span></div></div>
+        <div class="hvcard" onclick="openCinema('tCTEMTeCXMI')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/tCTEMTeCXMI/maxresdefault.jpg')"></div><div class="hvcard-label">6Frame Studio<span class="hvcard-tag">Cinematic Intro</span></div></div>
+        <div class="hvcard" onclick="openCinema('mFzzX6g5hTI')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/mFzzX6g5hTI/maxresdefault.jpg')"></div><div class="hvcard-label">Eden Festival<span class="hvcard-tag">Event Promo</span></div></div>
+        <div class="hvcard" onclick="openCinema('fwS1HKZBgfg')"><div class="hvcard-thumb" style="background-image:url('https://img.youtube.com/vi/fwS1HKZBgfg/maxresdefault.jpg')"></div><div class="hvcard-label">Director's Cut<span class="hvcard-tag">6Frame Commercial</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">Film Studios</span>
+    <span class="ticker-item">Music Labels</span>
+    <span class="ticker-item">Major Brands</span>
+    <span class="ticker-item">Independent Directors</span>
+    <span class="ticker-item">Ad Departments</span>
+    <span class="ticker-item">Production Companies</span>
+    <span class="ticker-item">Hollywood</span>
+    <span class="ticker-item">Las Vegas</span>
+    <span class="ticker-item">Los Angeles</span>
+    <span class="ticker-item">Built for the 0.1%</span>
+    <!-- duplicate -->
+    <span class="ticker-item">Film Studios</span>
+    <span class="ticker-item">Music Labels</span>
+    <span class="ticker-item">Major Brands</span>
+    <span class="ticker-item">Independent Directors</span>
+    <span class="ticker-item">Ad Departments</span>
+    <span class="ticker-item">Production Companies</span>
+    <span class="ticker-item">Hollywood</span>
+    <span class="ticker-item">Las Vegas</span>
+    <span class="ticker-item">Los Angeles</span>
+    <span class="ticker-item">Built for the 0.1%</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header reveal">
+    <span class="lbl">What We Build</span>
+    <h2 class="sh">Three tiers of production.<br><em>Zero compromises.</em></h2>
+    <p class="sp" style="max-width:560px;margin-top:16px">Every engagement is a full creative partnership — from concept to final render. We don't do templates. We don't do shortcuts. We do exactly what the work demands.</p>
+  </div>
+  <div class="service-tiers">
+    <div class="tier" onclick="location.href='premium-motion-logo.html'">
+      <div class="tier-thumb"><video autoplay muted loop playsinline src="premium-logo-motion.mp4"></video></div>
+    </div>
+    <div class="tier" onclick="location.href='cinematic-identity-package.html'">
+      <div class="tier-thumb"><video autoplay muted loop playsinline src="hf_20260617_151159_de73a94b-297d-4ecf-9ef8-9c487d7d9787.mp4"></video></div>
+    </div>
+    <div class="tier" onclick="location.href='theatrical-trailer.html'">
+      <div class="tier-thumb"><video autoplay muted loop playsinline src="hf_20260617_153054_31ba22d2-7578-45f8-887a-1d9a9140500a.mp4"></video></div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="showcase" id="showcase">
+  <div class="showcase-header reveal">
+    <span class="lbl lbl-dark">Our Work</span>
+    <h2 class="sh sh-dark">This is what your money<br><em>actually looks like.</em></h2>
+    <p class="sp sp-dark" style="max-width:520px;margin-top:14px">Every video below was built from scratch. No stock. No templates. Click any piece to view in full.</p>
+  </div>
+  <div class="showcase-grid">
+    <!-- 1. Sizzle Reel (wide) — CDN New.Sizzle.Reel.mp4 -->
+    <div class="vcard wide" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/New.Sizzle.Reel.mp4')">
+      <video data-src="https://6frame-videos.lvbretteam.workers.dev/New.Sizzle.Reel.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-overlay"><div class="vcard-title">6Frame Studio Sizzle Reel</div><div class="vcard-tag">Full Showcase — This is what $15,000+ looks like</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 2. Inner Music Video — CDN -->
+    <div class="vcard" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/Inner.Music.Video.mp4')">
+      <video data-src="https://6frame-videos.lvbretteam.workers.dev/Inner.Music.Video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-overlay"><div class="vcard-title">Inner — Music Video</div><div class="vcard-tag">Artist / Label</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 3. Be Afraid — CDN -->
+    <div class="vcard" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/Be.Afraid.mp4')">
+      <video data-src="https://6frame-videos.lvbretteam.workers.dev/Be.Afraid.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-overlay"><div class="vcard-title">Be Afraid. Be Very Afraid.</div><div class="vcard-tag">Motion Design</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 4. Superman — CDN -->
+    <div class="vcard" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/6Frame.Superman.Commercial.mp4')">
+      <video data-src="https://6frame-videos.lvbretteam.workers.dev/6Frame.Superman.Commercial.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-overlay"><div class="vcard-title">Superman Commercial</div><div class="vcard-tag">Epic Brand Film</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 5. 1810 Series Promo — CDN -->
+    <div class="vcard" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/1810.Short.Commercial.mp4')">
+      <video data-src="https://6frame-videos.lvbretteam.workers.dev/1810.Short.Commercial.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-overlay"><div class="vcard-title">1810 Series Promo</div><div class="vcard-tag">Brand Commercial</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 6. 6Frame Projector Logo — CDN -->
+    <div class="vcard" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/FilmProjector.Commercial.mp4')">
+      <video data-src="https://6frame-videos.lvbretteam.workers.dev/FilmProjector.Commercial.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-overlay"><div class="vcard-title">6Frame Projector Logo</div><div class="vcard-tag">Motion Identity</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 7. 1810 Series Commercial — CDN -->
+    <div class="vcard" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/6Frame.Sizzle.Reel.mp4')">
+      <video data-src="https://6frame-videos.lvbretteam.workers.dev/6Frame.Sizzle.Reel.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-overlay"><div class="vcard-title">1810 Series Commercial</div><div class="vcard-tag">Brand Commercial</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 8. 1810 Series Intro — CDN -->
+    <div class="vcard" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/6Frame.Opening.Scene.mp4')">
+      <video data-src="https://6frame-videos.lvbretteam.workers.dev/6Frame.Opening.Scene.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-overlay"><div class="vcard-title">1810 Series Intro</div><div class="vcard-tag">Brand Commercial</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 9. 6Frame Pitch Deck — CDN -->
+    <div class="vcard" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/6Frame.Pitch.Deck.mp4')">
+      <video data-src="https://6frame-videos.lvbretteam.workers.dev/6Frame.Pitch.Deck.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-overlay"><div class="vcard-title">6Frame Pitch Deck</div><div class="vcard-tag">Pitch Deck</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 10. Pitch Deck 3 — CDN -->
+    <div class="vcard" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/Pitch.Deck.3.mp4')">
+      <video data-src="https://6frame-videos.lvbretteam.workers.dev/Pitch.Deck.3.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-overlay"><div class="vcard-title">Pitch Deck Movie Trailer</div><div class="vcard-tag">Pitch Deck</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 11. Pearl Harbor — CDN -->
+    <div class="vcard" onclick="openCinema('https://6frame-videos.lvbretteam.workers.dev/Pearl.Harbor.mp4')">
+      <video data-src="https://6frame-videos.lvbretteam.workers.dev/Pearl.Harbor.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="vcard-overlay"><div class="vcard-title">Pearl Harbor</div><div class="vcard-tag">Historical / VFX</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 12. Full House Parody — YouTube T6kEXwSwhYo -->
+    <div class="vcard" onclick="openCinema('T6kEXwSwhYo')">
+      <iframe data-src="https://www.youtube.com/embed/T6kEXwSwhYo?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=T6kEXwSwhYo&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Full House Parody</div><div class="vcard-tag">Creative Parody</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 13. Par 4 the Course — YouTube GfHL-DApoek -->
+    <div class="vcard" onclick="openCinema('GfHL-DApoek')">
+      <iframe data-src="https://www.youtube.com/embed/GfHL-DApoek?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=GfHL-DApoek&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Par 4 the Course</div><div class="vcard-tag">Sports / Satire</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 14. El Patron — YouTube qUAdldPwI5Y -->
+    <div class="vcard" onclick="openCinema('qUAdldPwI5Y')">
+      <iframe data-src="https://www.youtube.com/embed/qUAdldPwI5Y?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=qUAdldPwI5Y&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">El Patron</div><div class="vcard-tag">Theatrical Trailer</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 15. The Thorn Recordings — YouTube nJnh9pLE24Y -->
+    <div class="vcard" onclick="openCinema('nJnh9pLE24Y')">
+      <iframe data-src="https://www.youtube.com/embed/nJnh9pLE24Y?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=nJnh9pLE24Y&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">The Thorn Recordings</div><div class="vcard-tag">Sci-Fi AI Short Film</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 16. Tesla — YouTube 1KflvheiU-o -->
+    <div class="vcard" onclick="openCinema('1KflvheiU-o')">
+      <iframe data-src="https://www.youtube.com/embed/1KflvheiU-o?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=1KflvheiU-o&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Tesla F*ck Around and Find Out</div><div class="vcard-tag">Brand Commercial</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 17. Batman — YouTube XLIxatny4F4 -->
+    <div class="vcard" onclick="openCinema('XLIxatny4F4')">
+      <iframe data-src="https://www.youtube.com/embed/XLIxatny4F4?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=XLIxatny4F4&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Batman Pitches AI Production</div><div class="vcard-tag">Character-Driven Brand Film</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 18. JMI Entertainment Logo — YouTube CAWbPBQC8BE -->
+    <div class="vcard" onclick="openCinema('CAWbPBQC8BE')">
+      <iframe data-src="https://www.youtube.com/embed/CAWbPBQC8BE?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=CAWbPBQC8BE&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">JMI Entertainment Logo Reveal</div><div class="vcard-tag">Motion Identity</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 19. IndeRoc — YouTube zwolCfhHNu0 -->
+    <div class="vcard" onclick="openCinema('zwolCfhHNu0')">
+      <iframe data-src="https://www.youtube.com/embed/zwolCfhHNu0?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=zwolCfhHNu0&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">IndeRoc — New Era of Distribution</div><div class="vcard-tag">Motion Identity</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 20. Manifest Nueve — YouTube -NNkPJEanlI -->
+    <div class="vcard" onclick="openCinema('-NNkPJEanlI')">
+      <iframe data-src="https://www.youtube.com/embed/-NNkPJEanlI?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=-NNkPJEanlI&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Manifest Nueve</div><div class="vcard-tag">Fragrance Commercial</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 21. Eden Festival — YouTube mFzzX6g5hTI -->
+    <div class="vcard" onclick="openCinema('mFzzX6g5hTI')">
+      <iframe data-src="https://www.youtube.com/embed/mFzzX6g5hTI?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=mFzzX6g5hTI&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Eden Arts Festival</div><div class="vcard-tag">Event Promo</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 22. 6Frame Commercial — YouTube xQbTwOwlRa4 -->
+    <div class="vcard" onclick="openCinema('xQbTwOwlRa4')">
+      <iframe data-src="https://www.youtube.com/embed/xQbTwOwlRa4?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=xQbTwOwlRa4&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Cinematic Commercial in Hours</div><div class="vcard-tag">Brand Film</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 23. 6Frame Studio — YouTube tCTEMTeCXMI -->
+    <div class="vcard" onclick="openCinema('tCTEMTeCXMI')">
+      <iframe data-src="https://www.youtube.com/embed/tCTEMTeCXMI?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=tCTEMTeCXMI&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">6Frame Studio — Dawn of Real-Time Cinema</div><div class="vcard-tag">Studio Identity</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 24. 6Frame Director Commercial — YouTube fwS1HKZBgfg -->
+    <div class="vcard" onclick="openCinema('fwS1HKZBgfg')">
+      <iframe data-src="https://www.youtube.com/embed/fwS1HKZBgfg?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=fwS1HKZBgfg&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">The Director's Cut: 6Frame Commercial</div><div class="vcard-tag">Director's Cut</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 25. The 27 Protocol — YouTube Bd2mecz_Tpo -->
+    <div class="vcard" onclick="openCinema('Bd2mecz_Tpo')">
+      <iframe data-src="https://www.youtube.com/embed/Bd2mecz_Tpo?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=Bd2mecz_Tpo&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">The 27 Protocol</div><div class="vcard-tag">Sci-Fi Thriller</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 26. Budweiser Commercial — YouTube Vyc0cnmC-FM -->
+    <div class="vcard" onclick="openCinema('Vyc0cnmC-FM')">
+      <iframe data-src="https://www.youtube.com/embed/Vyc0cnmC-FM?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=Vyc0cnmC-FM&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Budweiser Commercial</div><div class="vcard-tag">Brand Commercial</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 27. It Worked in the Demo — YouTube 4WFwPjry7Vs -->
+    <div class="vcard" onclick="openCinema('4WFwPjry7Vs')">
+      <iframe data-src="https://www.youtube.com/embed/4WFwPjry7Vs?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=4WFwPjry7Vs&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">It Worked in the Demo</div><div class="vcard-tag">Brand Film</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 28. The $106T Blind Spot — YouTube lQRgAjvqsWM -->
+    <div class="vcard" onclick="openCinema('lQRgAjvqsWM')">
+      <iframe data-src="https://www.youtube.com/embed/lQRgAjvqsWM?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=lQRgAjvqsWM&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">The $106T Blind Spot — PHYLL</div><div class="vcard-tag">Brand Film</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 29. 1810 Trailer — Pearl Harbor — YouTube Ddd8BXTflHI -->
+    <div class="vcard" onclick="openCinema('Ddd8BXTflHI')">
+      <iframe data-src="https://www.youtube.com/embed/Ddd8BXTflHI?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=Ddd8BXTflHI&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">1810 Trailer — Pearl Harbor</div><div class="vcard-tag">Cinematic / VFX</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 30. Pitch Decks Are Dead — YouTube IOLMKAkSIR0 -->
+    <div class="vcard" onclick="openCinema('IOLMKAkSIR0')">
+      <iframe data-src="https://www.youtube.com/embed/IOLMKAkSIR0?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=IOLMKAkSIR0&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Pitch Decks Are Dead</div><div class="vcard-tag">Pitch Deck</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 31. Don't Let Your Story Fade — YouTube pFB5FKDlwfM -->
+    <div class="vcard" onclick="openCinema('pFB5FKDlwfM')">
+      <iframe data-src="https://www.youtube.com/embed/pFB5FKDlwfM?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=pFB5FKDlwfM&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Don't Let Your Story Fade</div><div class="vcard-tag">Brand Film</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 32. Commercials for a New Epic Age — YouTube lRElNp-H5iE -->
+    <div class="vcard" onclick="openCinema('lRElNp-H5iE')">
+      <iframe data-src="https://www.youtube.com/embed/lRElNp-H5iE?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=lRElNp-H5iE&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Commercials for a New Epic Age</div><div class="vcard-tag">Brand Commercial</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 33. Zero Crew. Zero Delays. — YouTube VL_WudWC5MQ -->
+    <div class="vcard" onclick="openCinema('VL_WudWC5MQ')">
+      <iframe data-src="https://www.youtube.com/embed/VL_WudWC5MQ?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=VL_WudWC5MQ&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Zero Crew. Zero Delays.</div><div class="vcard-tag">Brand Film</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 34. The Dawn of Real-Time Cinema — YouTube eIGZyfRiC9M -->
+    <div class="vcard" onclick="openCinema('eIGZyfRiC9M')">
+      <iframe data-src="https://www.youtube.com/embed/eIGZyfRiC9M?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=eIGZyfRiC9M&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">The Dawn of Real-Time Cinema</div><div class="vcard-tag">Studio Identity</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 35. Pitch Deck Movie Trailer — YouTube CHUOStyLEaM -->
+    <div class="vcard" onclick="openCinema('CHUOStyLEaM')">
+      <iframe data-src="https://www.youtube.com/embed/CHUOStyLEaM?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=CHUOStyLEaM&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Pitch Deck Movie Trailer</div><div class="vcard-tag">Pitch Deck</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 36. Sidewalked — Official Trailer — YouTube _ZwD512JHRY -->
+    <div class="vcard" onclick="openCinema('_ZwD512JHRY')">
+      <iframe data-src="https://www.youtube.com/embed/_ZwD512JHRY?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=_ZwD512JHRY&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Sidewalked — Official Trailer</div><div class="vcard-tag">Documentary Trailer</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 37. Save Them All — YouTube 6IVAiZPPqww -->
+    <div class="vcard" onclick="openCinema('6IVAiZPPqww')">
+      <iframe data-src="https://www.youtube.com/embed/6IVAiZPPqww?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=6IVAiZPPqww&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">Save Them All</div><div class="vcard-tag">Brand Film</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 38. The Rarest of History — YouTube bYq1sLQDcu8 -->
+    <div class="vcard" onclick="openCinema('bYq1sLQDcu8')">
+      <iframe data-src="https://www.youtube.com/embed/bYq1sLQDcu8?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=bYq1sLQDcu8&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">The Rarest of History</div><div class="vcard-tag">Historical / VFX</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <!-- 39. 6Frame Studio Sizzle Video — YouTube lGcaAbIJhP8 -->
+    <div class="vcard" onclick="openCinema('lGcaAbIJhP8')">
+      <iframe data-src="https://www.youtube.com/embed/lGcaAbIJhP8?autoplay=1&mute=1&vq=hd2160&hd=1&loop=1&playlist=lGcaAbIJhP8&controls=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+      <div class="vcard-overlay"><div class="vcard-title">6Frame Studio Sizzle Video</div><div class="vcard-tag">Full Showcase</div></div>
+      <div class="vcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- CINEMA MODAL -->
+<div class="cinema-modal" id="cinemaModal" onclick="closeCinema(event)">
+  <button class="cinema-close" onclick="closeCinema()">×</button>
+  <iframe id="cinemaFrame" src="" frameborder="0" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  <video id="cinemaVideo" controls playsinline style="display:none;max-width:90vw;max-height:85vh;border-radius:2px;background:#000"></video>
+</div>
+
+<!-- FEATURED WORKS -->
+<section class="featured sec-pad" id="featured">
+  <div class="featured-header reveal">
+    <span class="lbl">Featured Productions</span>
+    <h2 class="sh">Signature pieces.<br><em>Unrestricted vision.</em></h2>
+  </div>
+  <div class="featured-grid">
+    <!-- Recursion — YouTube 7RGcGHfve2M -->
+    <div class="fcard full" onclick="openCinema('7RGcGHfve2M')">
+      <div class="fcard-thumb" style="background-image:url('https://img.youtube.com/vi/7RGcGHfve2M/maxresdefault.jpg')"></div>
+      <div class="fcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="fcard-info">
+        <div class="fcard-tag">Theatrical Trailer</div>
+        <div class="fcard-title">Recursion</div>
+        <div class="fcard-desc">A sci-fi thriller trailer built for the big screen. Cutting-edge VFX, cinematic sound design, and a narrative pull that hooks from the first frame — exactly what studio-grade production looks like.</div>
+      </div>
+    </div>
+    <!-- El Patron — YouTube qUAdldPwI5Y -->
+    <div class="fcard" onclick="openCinema('qUAdldPwI5Y')">
+      <div class="fcard-thumb" style="background-image:url('https://img.youtube.com/vi/qUAdldPwI5Y/maxresdefault.jpg');position:absolute;inset:0;background-size:cover;background-position:center;"></div>
+      <div class="fcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="fcard-info">
+        <div class="fcard-tag">Theatrical Trailer</div>
+        <div class="fcard-title">El Patron</div>
+        <div class="fcard-desc">A dark and gritty theatrical trailer built for the big screen — intense atmosphere, cinematic sound design, and storytelling that grabs from the first frame.</div>
+      </div>
+    </div>
+    <!-- Par 4 the Course — poster image, plays local file -->
+    <div class="fcard" onclick="openCinema('GfHL-DApoek')">
+      <div class="fcard-thumb" style="background-image:url('https://img.youtube.com/vi/GfHL-DApoek/maxresdefault.jpg');position:absolute;inset:0;background-size:cover;background-position:center;"></div>
+      <div class="fcard-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="fcard-info">
+        <div class="fcard-tag">Sports / Satire</div>
+        <div class="fcard-title">Par 4 the Course</div>
+        <div class="fcard-desc">A high-energy sports satire built with cinematic precision. Proof that 6Frame brings the same level of craft to every genre.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="reveal">
+    <span class="lbl">Who We Serve</span>
+    <h2 class="sh">Built for the industries<br><em>that demand perfection.</em></h2>
+    <p class="sp" style="max-width:500px;margin-top:14px">We are selective. We work with clients who understand that visual storytelling at this level is an investment — not an expense.</p>
+  </div>
+  <div class="industries-grid">
+    <div class="industry-card reveal reveal-delay-1">
+      <div class="ind-num">01</div>
+      <div class="ind-title">Film Studios & Distributors</div>
+      <div class="ind-desc">Theatrical trailers, studio identity systems, opening sequences, and marketing content built for the big screen. From independent features to major studio releases.</div>
+    </div>
+    <div class="industry-card reveal reveal-delay-2">
+      <div class="ind-num">02</div>
+      <div class="ind-title">Independent Directors & Filmmakers</div>
+      <div class="ind-desc">You have the vision. We give it the production value it deserves. Trailers, pitch materials, and visual packages that make investors and distributors pay attention.</div>
+    </div>
+    <div class="industry-card reveal reveal-delay-3">
+      <div class="ind-num">03</div>
+      <div class="ind-title">Music Labels & Artists</div>
+      <div class="ind-desc">Music videos, artist identity packages, and visual content that elevates the brand behind the music. Built to perform across streaming, social, and broadcast.</div>
+    </div>
+    <div class="industry-card reveal reveal-delay-4">
+      <div class="ind-num">04</div>
+      <div class="ind-title">Major Brand Ad Departments</div>
+      <div class="ind-desc">High-concept brand films, product launches, and campaign content that go beyond advertising. Visual storytelling that builds culture around your brand.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat-item reveal">
+    <div class="stat-num" data-count="25">0</div>
+    <div class="stat-label">Productions Completed</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-2">
+    <div class="stat-num">$0</div>
+    <div class="stat-label">Compromises Made</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-3">
+    <div class="stat-num">0.1<span style="font-size:.5em">%</span></div>
+    <div class="stat-label">The tier we operate at</div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process sec-pad" id="process">
+  <div class="reveal">
+    <span class="lbl lbl-dark">How It Works</span>
+    <h2 class="sh sh-dark">From brief to<br><em>final render.</em></h2>
+  </div>
+  <div class="process-grid">
+    <div class="proc-item reveal reveal-delay-1">
+      <div class="proc-num">01</div>
+      <div class="proc-line"></div>
+      <div class="proc-title">Request a Brief</div>
+      <div class="proc-desc">Submit your project details. We'll assess fit, scope, and timeline. Not every project is right for us — and we'll tell you honestly if it isn't.</div>
+    </div>
+    <div class="proc-item reveal reveal-delay-2">
+      <div class="proc-num">02</div>
+      <div class="proc-line"></div>
+      <div class="proc-title">Creative Consultation</div>
+      <div class="proc-desc">A focused strategy session where we define the vision, the tone, the deliverables, and the non-negotiables. This is where great work begins.</div>
+    </div>
+    <div class="proc-item reveal reveal-delay-3">
+      <div class="proc-num">03</div>
+      <div class="proc-line"></div>
+      <div class="proc-title">Full Production</div>
+      <div class="proc-desc">Concept through final frame — motion design, 3D, VFX, sound design. You're kept in the loop, but you hired us to handle the execution.</div>
+    </div>
+    <div class="proc-item reveal reveal-delay-4">
+      <div class="proc-num">04</div>
+      <div class="proc-line"></div>
+      <div class="proc-title">Delivery & Licensing</div>
+      <div class="proc-desc">Master files, broadcast-ready exports, and all formats you need for theatrical, streaming, broadcast, and social distribution.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testimonials-header reveal">
+    <span class="lbl">What Clients Say</span>
+    <h2 class="sh">The work speaks.<br><em>But so do they.</em></h2>
+  </div>
+  <div class="trow">
+    <div class="trow-inner">
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"6Frame transformed our content strategy overnight. Every single piece looks like it came from a major production house. This is not motion design — this is cinema."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#ff4d00">S</div><div><div class="tcard-name">Sarah Chen</div><div class="tcard-role">Head of Marketing</div></div><div class="tcard-company">Studio</div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"I was skeptical about AI-assisted production. Then I saw our first 6Frame delivery. Cinematic quality, brand-perfect, arrived when they said it would. Conversion rates jumped 43%."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#1a1a8a">M</div><div><div class="tcard-name">Marcus Rivera</div><div class="tcard-role">Founder & Director</div></div><div class="tcard-company">Indie Film</div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"The 48-hour turnaround is insane. We brief Monday, we have a rough cut Wednesday. And it's not a rough cut — it's basically final. The speed without sacrifice of quality is unreal."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#8a0033">A</div><div><div class="tcard-name">Alex Thompson</div><div class="tcard-role">VP Content</div></div><div class="tcard-company">Major Label</div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"We've changed how the entire industry perceives us. The video quality is genuinely world-class. Our pitch deck alone has closed three major distribution deals."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#005233">J</div><div><div class="tcard-name">James Park</div><div class="tcard-role">Executive Producer</div></div><div class="tcard-company">Distribution</div></div>
+      </div>
+      <!-- duplicates for loop -->
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"6Frame transformed our content strategy overnight. Every single piece looks like it came from a major production house. This is not motion design — this is cinema."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#ff4d00">S</div><div><div class="tcard-name">Sarah Chen</div><div class="tcard-role">Head of Marketing</div></div><div class="tcard-company">Studio</div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"I was skeptical about AI-assisted production. Then I saw our first 6Frame delivery. Cinematic quality, brand-perfect, arrived when they said it would. Conversion rates jumped 43%."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#1a1a8a">M</div><div><div class="tcard-name">Marcus Rivera</div><div class="tcard-role">Founder & Director</div></div><div class="tcard-company">Indie Film</div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"The 48-hour turnaround is insane. We brief Monday, we have a rough cut Wednesday. And it's not a rough cut — it's basically final. The speed without sacrifice of quality is unreal."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#8a0033">A</div><div><div class="tcard-name">Alex Thompson</div><div class="tcard-role">VP Content</div></div><div class="tcard-company">Major Label</div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"We've changed how the entire industry perceives us. The video quality is genuinely world-class. Our pitch deck alone has closed three major distribution deals."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#005233">J</div><div><div class="tcard-name">James Park</div><div class="tcard-role">Executive Producer</div></div><div class="tcard-company">Distribution</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="trow" style="margin-top:0">
+    <div class="trow-inner">
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"We've tried every agency. 6Frame is the only one that actually delivered what they promised. The theatrical trailer closed our Series A. That's not hyperbole."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#7a4400">R</div><div><div class="tcard-name">Rachel Torres</div><div class="tcard-role">Director / Producer</div></div><div class="tcard-company">Film</div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"Absolutely the best creative collaboration I've ever experienced. The team understands what a brand needs to feel like — not just look like. Massive difference."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#ff4d00">A</div><div><div class="tcard-name">Anna Pickard</div><div class="tcard-role">Global Social Media Lead</div></div><div class="tcard-company">Brand</div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"Our music video reel has been used in three major licensing pitches since 6Frame rebuilt it. The craft is at a level most labels only dream about."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#002266">D</div><div><div class="tcard-name">David Kim</div><div class="tcard-role">A&R Director</div></div><div class="tcard-company">Label</div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"The turnaround and the quality. The price point and the quality. I keep coming back to the quality. At this budget level, you're not supposed to get this good."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#330044">M</div><div><div class="tcard-name">Marc Vitulii</div><div class="tcard-role">VP Marketing</div></div><div class="tcard-company">Brand</div></div>
+      </div>
+      <!-- duplicates -->
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"We've tried every agency. 6Frame is the only one that actually delivered what they promised. The theatrical trailer closed our Series A. That's not hyperbole."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#7a4400">R</div><div><div class="tcard-name">Rachel Torres</div><div class="tcard-role">Director / Producer</div></div><div class="tcard-company">Film</div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"Absolutely the best creative collaboration I've ever experienced. The team understands what a brand needs to feel like — not just look like. Massive difference."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#ff4d00">A</div><div><div class="tcard-name">Anna Pickard</div><div class="tcard-role">Global Social Media Lead</div></div><div class="tcard-company">Brand</div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"Our music video reel has been used in three major licensing pitches since 6Frame rebuilt it. The craft is at a level most labels only dream about."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#002266">D</div><div><div class="tcard-name">David Kim</div><div class="tcard-role">A&R Director</div></div><div class="tcard-company">Label</div></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <div class="tcard-text">"The turnaround and the quality. The price point and the quality. I keep coming back to the quality. At this budget level, you're not supposed to get this good."</div>
+        <div class="tcard-author"><div class="tcard-avatar" style="background:#330044">M</div><div><div class="tcard-name">Marc Vitulii</div><div class="tcard-role">VP Marketing</div></div><div class="tcard-company">Brand</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="contact">
+  <div class="reveal">
+    <h2 class="sh" style="font-size:clamp(36px,5.5vw,80px);color:#000;letter-spacing:-.06em">
+      Ready to work at the<br>
+      <em style="color:var(--accent)">highest level?</em>
+    </h2>
+    <p class="final-sub">We are selective. Every project we take on gets our full creative force. If your production deserves that — let's talk.</p>
+    <div class="final-cta-btns">
+      <a href="contact.html" class="btn-dark">Request a Brief</a>
+      <a href="#showcase" class="btn-outline">View Our Work</a>
+    </div>
+    <div class="location-tag">Las Vegas &nbsp;/&nbsp; Los Angeles</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <a href="#" class="logo" style="font-size:20px">6<span class="logo-accent">FRAME</span></a>
+      <p>Cinematic brand evolution for film studios, music labels, major brands, and directors who refuse to compromise. Las Vegas / Los Angeles.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Premium Motion Logo — $5,000+</a></li>
+        <li><a href="#services">Cinematic Identity Package — $15,000+</a></li>
+        <li><a href="#services">Theatrical Trailer — $25,000+</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Who We Serve</h4>
+      <ul>
+        <li><a href="#industries">Film Studios</a></li>
+        <li><a href="#industries">Music Labels</a></li>
+        <li><a href="#industries">Major Brands</a></li>
+        <li><a href="#industries">Independent Directors</a></li>
+        <li><a href="#industries">Ad Departments</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="#showcase">Our Work</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://6framerates.com">6framerates.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div class="foot-copy">© 2026 <span>6FRAME</span>. Cinematic Brand Evolution. All rights reserved.</div>
+    <div class="foot-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll behavior
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// Scroll reveal
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// Animated counters
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = parseInt(el.dataset.count);
+    if (!target) return;
+    let start = 0;
+    const dur = 1800;
+    const step = timestamp => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / dur, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(ease * target) + '+';
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+    counterObs.unobserve(el);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
+
+
+// Lazy-load + play preview videos only when visible (prevents bandwidth contention)
+const previewVideos = document.querySelectorAll('video[data-src]');
+const previewObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const v = entry.target;
+    if (entry.isIntersecting) {
+      if (!v.src) { v.preload = 'auto'; v.src = v.dataset.src; }
+      v.play().catch(() => {});
+    } else {
+      v.pause();
+    }
+  });
+}, { threshold: 0.15, rootMargin: '200px 0px' });
+previewVideos.forEach(v => previewObs.observe(v));
+
+const previewFrames = document.querySelectorAll('iframe[data-src]');
+const frameObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const f = entry.target;
+    if (entry.isIntersecting) {
+      if (!f.src) f.src = f.dataset.src;
+    } else {
+      if (f.src) { f.dataset.src = f.src; f.removeAttribute('src'); }
+    }
+  });
+}, { threshold: 0.1, rootMargin: '100px 0px' });
+previewFrames.forEach(f => frameObs.observe(f));
+
+// Cinema modal — supports YouTube (ID) and CDN MP4 (full URL)
+function openCinema(src) {
+  const modal = document.getElementById('cinemaModal');
+  const frameEl = document.getElementById('cinemaFrame');
+  const videoEl = document.getElementById('cinemaVideo');
+  // Free up bandwidth: stop every background preview video before loading the full piece
+  document.querySelectorAll('video[data-src],.vcard video,.fcard video,.hvcard video').forEach(v => { try { v.pause(); } catch(e){} });
+  if (src.startsWith('https://') || src.endsWith('.mp4')) {
+    // CDN MP4
+    frameEl.style.display = 'none';
+    videoEl.style.display = 'block';
+    videoEl.preload = 'auto';
+    videoEl.src = src;
+    videoEl.load();
+    videoEl.play();
+  } else {
+    // YouTube ID
+    videoEl.pause();
+    videoEl.src = '';
+    videoEl.style.display = 'none';
+    frameEl.style.display = 'block';
+    frameEl.src = `https://www.youtube.com/embed/${src}?autoplay=1&vq=hd2160&hd=1&rel=0&modestbranding=1&color=white`;
+  }
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeCinema(e) {
+  if (e && e.target !== document.getElementById('cinemaModal') && !e.target.classList.contains('cinema-close')) return;
+  const frameEl = document.getElementById('cinemaFrame');
+  const videoEl = document.getElementById('cinemaVideo');
+  frameEl.src = '';
+  videoEl.pause();
+  videoEl.src = '';
+  document.getElementById('cinemaModal').classList.remove('active');
+  document.body.style.overflow = '';
+  // Resume any preview videos currently in view
+  document.querySelectorAll('video[data-src]').forEach(v => {
+    const r = v.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) v.play().catch(() => {});
+  });
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCinema({ target: document.getElementById('cinemaModal') }); });
+</script>
+</body>
+</html>

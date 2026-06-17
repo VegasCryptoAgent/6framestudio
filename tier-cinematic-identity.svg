@@ -1,0 +1,59 @@
+<svg viewBox="0 0 900 1300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120800"/>
+      <stop offset="55%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="50%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#ff6b30" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+
+  <rect width="900" height="1300" fill="url(#bgGrad2)"/>
+  <rect width="900" height="1300" fill="url(#glow2)"/>
+
+  <!-- stacked identity panels, fanned like brand frames -->
+  <g transform="translate(450,560)">
+    <rect x="-150" y="-220" width="300" height="440" rx="14" fill="#111111" stroke="#ff6b30" stroke-opacity="0.55" stroke-width="1.5" transform="rotate(-10)"/>
+    <rect x="-150" y="-220" width="300" height="440" rx="14" fill="#0d0d0d" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5" transform="rotate(4)"/>
+    <rect x="-150" y="-220" width="300" height="440" rx="14" fill="#161616" stroke="#ff4d00" stroke-opacity="0.85" stroke-width="2"/>
+
+    <!-- inner mark on front panel -->
+    <g>
+      <line x1="-90" y1="-150" x2="90" y2="-150" stroke="#ff6b30" stroke-width="3"/>
+      <circle cx="0" cy="-40" r="58" fill="none" stroke="#ff6b30" stroke-width="2.5"/>
+      <circle cx="0" cy="-40" r="22" fill="#ff4d00"/>
+      <line x1="-90" y1="80" x2="40" y2="80" stroke="#ffffff" stroke-opacity="0.3" stroke-width="4"/>
+      <line x1="-90" y1="110" x2="10" y2="110" stroke="#ffffff" stroke-opacity="0.18" stroke-width="4"/>
+      <line x1="-90" y1="150" x2="90" y2="150" stroke="#ff6b30" stroke-opacity="0.4" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- film perforation strip along left edge -->
+  <g fill="#ffffff" opacity="0.15">
+    <rect x="30" y="120" width="16" height="26" rx="3"/>
+    <rect x="30" y="180" width="16" height="26" rx="3"/>
+    <rect x="30" y="240" width="16" height="26" rx="3"/>
+    <rect x="30" y="300" width="16" height="26" rx="3"/>
+    <rect x="30" y="980" width="16" height="26" rx="3"/>
+    <rect x="30" y="1040" width="16" height="26" rx="3"/>
+    <rect x="30" y="1100" width="16" height="26" rx="3"/>
+    <rect x="30" y="1160" width="16" height="26" rx="3"/>
+  </g>
+  <g fill="#ffffff" opacity="0.15">
+    <rect x="854" y="120" width="16" height="26" rx="3"/>
+    <rect x="854" y="180" width="16" height="26" rx="3"/>
+    <rect x="854" y="240" width="16" height="26" rx="3"/>
+    <rect x="854" y="300" width="16" height="26" rx="3"/>
+    <rect x="854" y="980" width="16" height="26" rx="3"/>
+    <rect x="854" y="1040" width="16" height="26" rx="3"/>
+    <rect x="854" y="1100" width="16" height="26" rx="3"/>
+    <rect x="854" y="1160" width="16" height="26" rx="3"/>
+  </g>
+
+  <ellipse cx="450" cy="940" rx="260" ry="50" fill="#ff4d00" opacity="0.22" filter="url(#soft)"/>
+  <rect x="0" y="1000" width="900" height="300" fill="#000000" opacity="0.5"/>
+</svg>
