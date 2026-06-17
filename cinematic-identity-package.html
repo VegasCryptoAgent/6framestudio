@@ -722,11 +722,16 @@ const previewObs = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     const v = entry.target;
     if (entry.isIntersecting) {
-      if (!v.src) { v.preload = 'auto'; v.src = v.dataset.src; }
+      if (!v.getAttribute('src')) {
+        v.muted = true;
+        v.src = v.dataset.src;
+        v.load();
+      }
+      v.muted = true;
       v.play().catch(() => {});
     } else { v.pause(); }
   });
-}, { threshold: 0.15, rootMargin: '200px 0px' });
+}, { threshold: 0.1, rootMargin: '400px 0px' });
 previewVideos.forEach(v => previewObs.observe(v));
 const previewFrames = document.querySelectorAll('iframe[data-src]');
 const frameObs = new IntersectionObserver(entries => {
