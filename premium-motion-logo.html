@@ -877,16 +877,15 @@ const previewObs = new IntersectionObserver(entries => {
 previewVideos.forEach(v => previewObs.observe(v));
 const previewFrames = document.querySelectorAll('iframe[data-src]');
 const isTouchDevice = window.matchMedia('(hover:none)').matches || ('ontouchstart' in window);
-if (!isTouchDevice) {
-  const frameObs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const f = entry.target;
-      if (entry.isIntersecting) { if (!f.getAttribute('src')) f.src = f.dataset.src; }
-      else { if (f.getAttribute('src')) { f.dataset.src = f.src; f.removeAttribute('src'); } }
-    });
-  }, { threshold: 0.1, rootMargin: '100px 0px' });
-  previewFrames.forEach(f => frameObs.observe(f));
-}
+const frameMargin = isTouchDevice ? '0px' : '100px 0px';
+const frameObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const f = entry.target;
+    if (entry.isIntersecting) { if (!f.getAttribute('src')) f.src = f.dataset.src; }
+    else { if (f.getAttribute('src')) { f.dataset.src = f.src; f.removeAttribute('src'); } }
+  });
+}, { threshold: 0.1, rootMargin: frameMargin });
+previewFrames.forEach(f => frameObs.observe(f));
 function openCinema(src) {
   const modal = document.getElementById('cinemaModal');
   const frameEl = document.getElementById('cinemaFrame');
